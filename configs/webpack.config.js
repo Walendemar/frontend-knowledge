@@ -25,6 +25,20 @@ module.exports = {
 		path: PATHS.build,
 		filename: "app.js",
 	},
+	module: {
+		rules: [
+			{
+				test: /\.(js|jsx)$/,
+                exclude: /(node_modules)/,
+				loader: require.resolve("babel-loader"),
+				options: {
+					compact: false,
+					cacheCompression: false,
+					cacheDirectory: true,
+				},
+			},
+		],
+	},
 	plugins: [
 		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({

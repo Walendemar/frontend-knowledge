@@ -17,6 +17,10 @@
 		"url": "https://github.com/Walendemar/frontend-knowledge/issues"
 	},
 	"devDependencies": {
+		"@babel/core": "^7.22.20",
+		"@babel/preset-env": "^7.22.20",
+		"@babel/preset-react": "^7.22.15",
+		"babel-loader": "^9.1.3",
 		"clean-webpack-plugin": "^4.0.0",
 		"cross-env": "^7.0.3",
 		"html-webpack-plugin": "^5.5.3",
@@ -24,5 +28,9 @@
 		"webpack": "^5.88.2",
 		"webpack-cli": "^5.1.4",
 		"webpack-dev-server": "^4.15.1"
+	},
+	"dependencies": {
+		"react": "17.0.2",
+		"react-dom": "17.0.2"
 	}
 }
