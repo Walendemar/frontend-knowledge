@@ -15,7 +15,7 @@ const PATHS = {
 
 console.log(path.resolve(ROOT_DIR, "template/template.html"));
 
-module.exports = {
+const config = {
 	mode: isProduction ? "production" : "development",
 	devtool: isProduction ? "hidden-source-map" : "eval-cheap-module-source-map",
 	entry: {
@@ -29,7 +29,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.(js|jsx)$/,
-                exclude: /(node_modules)/,
+				exclude: /(node_modules)/,
 				loader: require.resolve("babel-loader"),
 				options: {
 					compact: false,
@@ -40,7 +40,6 @@ module.exports = {
 		],
 	},
 	plugins: [
-		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({
 			title: "Knowledge",
 			template: path.resolve(ROOT_DIR, "./template/template.html"),
@@ -67,3 +66,9 @@ module.exports = {
 		hot: true,
 	},
 };
+
+if (isProduction) {
+	config.plugins.push(new CleanWebpackPlugin());
+}
+
+module.exports = config;
