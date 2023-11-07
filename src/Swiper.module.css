@@ -1,0 +1,16 @@
+.main_container {
+    position: relative;
+    width: 200px;
+}
+
+.left_arrow {
+    left: 0;
+}
+
+.right_arrow {
+    right: 0;
+}
+
+.pagination_container {
+    bottom: 0;
+}

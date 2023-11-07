@@ -29,6 +29,10 @@ const config = {
         test: /\.(ts|tsx)$/,
         loader: "ts-loader",
       },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
   plugins: [
