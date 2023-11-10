@@ -1,5 +1,7 @@
+import Container from "./components/Container/Container";
+
 const App = () => {
-  return <h3>Frontend knowledge</h3>;
+  return <Container />;
 };
 
 export default App;

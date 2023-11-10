@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    align-items: flex-end;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    box-sizing: border-box;
+}
+
+.elementContainer {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-wrap: wrap-reverse;
+    gap: 10px;
+}
