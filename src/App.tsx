@@ -1,5 +1,7 @@
+import SimpleComponent from "@components/SimpleComponent";
+
 const App = () => {
-  return <h3>Frontend knowledge</h3>;
+  return <SimpleComponent />;
 };
 
 export default App;

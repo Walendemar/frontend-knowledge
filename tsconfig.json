@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "jsx": "react-jsx",
     "lib": ["esnext", "dom"],
     "module": "esnext",
@@ -9,11 +9,11 @@
     "target": "es6",
     "typeRoots": ["node_modules/@types"],
     "paths": {
-      "@components": ["src/components"],
-      "@utils": ["src/utils"]
+      "@components/*": ["src/components/*"],
+      "@utils/*": ["src/utils/*"]
     },
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src"],
+  "include": ["src/**/*"],
   "exclude": ["dist", "node_modules"]
 }
