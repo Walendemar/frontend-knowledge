@@ -9,7 +9,9 @@
     "target": "es6",
     "typeRoots": ["node_modules/@types"],
     "paths": {
+      "@components/*": ["src/components/*"],
       "@components": ["src/components"],
+      "@utils/*": ["src/utils/*"],
       "@utils": ["src/utils"]
     },
     "allowSyntheticDefaultImports": true
