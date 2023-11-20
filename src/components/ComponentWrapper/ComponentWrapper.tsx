@@ -6,19 +6,19 @@ const ComponentWrapper: FC<ComponentWrapperProps> = ({
   children,
   conditions,
 }) => {
+  if (!conditions) {
+    return null;
+  }
+
   if (Array.isArray(conditions)) {
-    const calculatedConditions = !conditions.some((condition) => condition);
+    const calculatedConditions = !conditions.some((condition) => !condition);
 
     if (!calculatedConditions) {
       return null;
     }
   }
 
-  if (!conditions) {
-    return null;
-  }
-
-  return <div>{children}</div>;
+  return children;
 };
 
 export default ComponentWrapper;

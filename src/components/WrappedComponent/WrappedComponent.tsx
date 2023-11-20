@@ -1,11 +1,13 @@
-import { useEffect } from "react";
+import { FC, useEffect } from "react";
 
-const WrappedComponent = () => {
+import { WrappedComponentProps } from "./types";
+
+const WrappedComponent: FC<WrappedComponentProps> = ({ val }) => {
   useEffect(() => {
     console.log("Rerender Wrapped Components");
   }, []);
 
-  return <div>Wrapped Component</div>;
+  return <div>Wrapped Component {val}</div>;
 };
 
 export default WrappedComponent;
