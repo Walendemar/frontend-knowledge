@@ -1,5 +1,7 @@
+import Button from "./components/Button";
+
 const App = () => {
-  return <h3>Frontend knowledge</h3>;
+  return <Button />;
 };
 
 export default App;
